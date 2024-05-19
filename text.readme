@@ -1,0 +1,106 @@
+Essential Extensions for React Development
+
+ESLint:
+
+Description: ESLint helps you identify and fix problems in your JavaScript code.
+Why: Ensures code quality and consistency.
+Install: dbaeumer.vscode-eslint
+
+Prettier - Code formatter:
+
+Description: Prettier is an opinionated code formatter that supports many languages.
+Why: Keeps your code clean and formatted consistently.
+Install: esbenp.prettier-vscode
+VSCode React Refactor:
+
+Description: This extension provides utilities for extracting JSX code parts into new components.
+Why: Helps refactor and organize your React components efficiently.
+Install: planbcoding.vscode-react-refactor
+React PropTypes Intellisense:
+
+Description: Provides IntelliSense for React PropTypes.
+Why: Enhances coding experience by offering hints for prop types in React components.
+Install: ofhumanbondage.react-proptypes-intellisense
+Simple React Snippets:
+
+Description: A collection of simple React code snippets.
+Why: Speeds up the development process with snippets for common React patterns.
+Install: burkeholland.simple-react-snippets
+JavaScript (ES6) code snippets:
+
+Description: Code snippets for ES6 JavaScript.
+Why: Provides useful ES6 snippets that can be used in React development.
+Install: xabikos.JavaScriptSnippets
+Auto Import:
+
+Description: Automatically finds, parses, and provides code actions and code completion for all available imports.
+Why: Saves time by automatically importing necessary modules.
+Install: steoates.autoimport
+Path Intellisense:
+
+Description: Provides path completion for importing files.
+Why: Simplifies and speeds up the process of importing files.
+Install: christian-kohler.path-intellisense
+Additional Useful Extensions
+Bracket Pair Colorizer:
+
+Description: This extension allows matching brackets to be identified with colors.
+Why: Makes it easier to identify matching brackets, improving code readability.
+Install: CoenraadS.bracket-pair-colorizer-2
+Live Server:
+
+Description: Launch a development local server with live reload feature for static & dynamic pages.
+Why: Useful for quick testing of HTML files outside the React development server.
+Install: ritwickdey.LiveServer
+GitLens — Git supercharged:
+
+Description: Supercharge the built-in Git capabilities.
+Why: Provides enhanced Git functionalities directly within VS Code.
+Install: eamodio.gitlens
+Color Highlight:
+
+Description: Highlights CSS/web colors in your code.
+Why: Makes it easier to see colors directly in your code files.
+Install: naumovs.color-highlight
+Debugger for Chrome:
+
+Description: Debug your JavaScript code in the Chrome browser, or other targets that support the Chrome Debugger protocol.
+Why: Provides powerful debugging features directly in VS Code.
+Install: msjsdiag.debugger-for-chrome
+Setting Up Prettier and ESLint
+To ensure Prettier and ESLint work together seamlessly, you can create configuration files in your project:
+
+.prettierrc: Prettier configuration file.
+
+json
+Copy code
+{
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "printWidth": 80,
+  "tabWidth": 2
+}
+.eslintrc.json: ESLint configuration file.
+
+json
+Copy code
+{
+  "extends": ["eslint:recommended", "plugin:react/recommended", "prettier"],
+  "plugins": ["react"],
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "react/prop-types": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
